@@ -24,6 +24,7 @@ git clone direccion_remota
 ```
 git remote add origin https://github.com/cchura94/front_proyecto_angular.git
 ```
+### Para subir los cambios al repositorio remoto
 ---------------------------
 ```
 git add .
