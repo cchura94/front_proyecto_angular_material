@@ -30,6 +30,8 @@ git add .
 git commit -m "Proyecto base Angular"
 git push origin master
 ```
-
-
 ---------------------------
+### para actualizar los nuevo cambios
+```
+git pull origin master
+```
