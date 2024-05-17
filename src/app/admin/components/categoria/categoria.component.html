@@ -20,8 +20,8 @@
             <td>{{ cat.nombre }}</td>
             <td>{{ cat.detalle }}</td>
             <td>
-                <button>editar</button>
-                <button>eliminar</button>
+                <button (click)="funEditarCategoria(cat)">editar</button>
+                <button (click)="funEliminar(cat)">eliminar</button>
             </td>
         </tr>
         }

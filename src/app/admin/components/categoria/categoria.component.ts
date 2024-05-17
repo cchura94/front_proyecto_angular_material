@@ -25,14 +25,39 @@ export class CategoriaComponent {
   }
 
   funGuardarCategoria(){
-    this.categoriaService.guardarCategoria(this.categoria).subscribe(
-      (res: any) => {
-        console.log(res);
-        this.funGetCategorias();
-      },
-      (error) => {  }
-    );
-  
+    if(this.categoria.id){
+      this.categoriaService.modificarCategoria(this.categoria.id, this.categoria).subscribe(
+        (res: any) => {
+          console.log(res);
+          this.funGetCategorias();
+        },
+        (error) => {  }
+      );
+
+    }else{
+      this.categoriaService.guardarCategoria(this.categoria).subscribe(
+        (res: any) => {
+          console.log(res);
+          this.funGetCategorias();
+        },
+        (error) => {  }
+      );
+
+    }
+    this.categoria = {};
+  }
+
+  funEditarCategoria(cat:any){
+    this.categoria = cat;
+  }
+
+  funEliminar(cat:any){
+    if(confirm("¿Está seguro de elininar la categoria?")){
+      this.categoriaService.eliminarCategorias(cat.id)
+
+      this.funGetCategorias();
+    }
+
   }
 
 

@@ -14,11 +14,11 @@ export class CategoriaService {
   constructor(private http: HttpClient) { }
 
   listarCategorias(){
-    return this.http.get(`${this.urlBase}/categoria`, {headers: {Authorization: 'Bearer 58|6HGNwU1Y1MgER09UoVqXx3jPDlIn9kgyMPevCay865dc1ef8'}})
+    return this.http.get(`${this.urlBase}/categoria`)
   }
 
   guardarCategoria(datos: any){
-    return this.http.post(`${this.urlBase}/categoria`, datos, {headers: {Authorization: 'Bearer 58|6HGNwU1Y1MgER09UoVqXx3jPDlIn9kgyMPevCay865dc1ef8'}});
+    return this.http.post(`${this.urlBase}/categoria`, datos);
   }
 
   mostrarCategoria(id: number){
@@ -30,7 +30,7 @@ export class CategoriaService {
     return this.http.put(`${this.urlBase}/categoria/${id}`, datos);
   }
 
-  elimninarCategorias(id: number){
+  eliminarCategorias(id: number){
     return this.http.delete(`${this.urlBase}/categoria/${id}`);
   }
 }
