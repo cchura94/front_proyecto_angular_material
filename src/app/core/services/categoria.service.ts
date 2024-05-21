@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class CategoriaService {
   // solo en la version 17
   // http2 = inject(HttpClient)
 
-  urlBase: string = "https://lv.blumbit.net/back/public/api"
+  urlBase: string = environment.servidor1
 
   constructor(private http: HttpClient) { }
 
