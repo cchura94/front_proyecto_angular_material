@@ -4,6 +4,16 @@
 <input type="text" name="nombre" [(ngModel)]="categoria.nombre">
 <input type="text" name="detalle" [(ngModel)]="categoria.detalle">
 <button (click)="funGuardarCategoria()">Guardar Categoria</button>
+
+<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+
+<button mat-raised-button
+            matTooltip="Info about the action"
+            aria-label="Button that displays a tooltip when focused or hovered over">
+    Action
+    </button>
+    
+
 <table border="1">
     <thead>
         <tr>

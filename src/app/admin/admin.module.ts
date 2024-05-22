@@ -8,6 +8,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from '../core/core.module';
 import { FormsModule } from '@angular/forms';
 import { ProductoComponent } from './components/producto/producto.component';
+import { MaterialModule } from '../material/material.module';
+
+//import {MatProgressBarModule} from '@angular/material/progress-bar';
+//import {MatButtonModule} from '@angular/material/button';
+//import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -21,7 +26,12 @@ import { ProductoComponent } from './components/producto/producto.component';
     AdminRoutingModule,
     HttpClientModule,
     CoreModule,
-    FormsModule
+    FormsModule,
+    MaterialModule
+    // MatProgressBarModule,
+    // MatButtonModule,
+    // MatTooltipModule
+    
   ]
 })
 export class AdminModule { }
